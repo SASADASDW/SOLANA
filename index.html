@@ -539,7 +539,7 @@
     document.getElementById('walletBtn').addEventListener('click', () => {
         updateEarnings();
         updateUI();
-        document.getElementById('walletModal').classList.remove('hidden');
+        document.getElementById('walletModal').classList.remove('hidden'); // Show the wallet modal
     });
 
     document.getElementById('resetProfitsBtn').addEventListener('click', () => {
@@ -562,7 +562,7 @@
         const address = document.getElementById('usdtAddress').textContent;
         navigator.clipboard.writeText(address).then(() => {
             console.log('Wallet address copied to clipboard:', address);
-            showNotification(); // Call the function to show the notification
+            showNotification('تم نسخ عنوان المحفظة بنجاح!'); // Show notification
         }).catch(err => {
             console.error('Failed to copy: ', err);
         });
