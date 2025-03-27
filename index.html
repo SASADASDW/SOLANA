@@ -80,9 +80,21 @@
       cursor: not-allowed;
       opacity: 0.7;
     }
+
+    /* Gradient button styles */
+    .gradient-button {
+      background: linear-gradient(90deg, #4B0082, #8A2BE2); /* Purple to Blue */
+      color: white;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .gradient-button:hover {
+      background: linear-gradient(90deg, #8A2BE2, #4B0082); /* Blue to Purple */
+      transform: scale(1.05);
+    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 min-h-screen text-white">
+<body class="bg-gradient-to-br from-black via-purple-900 to-blue-900 min-h-screen text-white">
   <!-- شريط التنقل -->
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
@@ -150,7 +162,7 @@
       </div>
 
       <!-- زر التحكم الرئيسي -->
-      <button id="mainActionBtn" class="px-8 py-4 rounded-full text-lg font-bold transform transition hover:scale-105 w-64 bg-green-500 hover:bg-green-600">
+      <button id="mainActionBtn" class="gradient-button hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transform transition hover:scale-105 w-64">
         <i class="fas fa-play-circle mr-2"></i>بدء التعدين
       </button>
     </div>
