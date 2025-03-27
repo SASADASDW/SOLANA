@@ -12,6 +12,16 @@
       background-color: #000; /* Fallback color */
       background-image: repeating-linear-gradient(60deg, #1A1A1A 0%, #1A1A1A 25%, #2B2B2B 25%, #2B2B2B 50%, #1A1A1A 50%, #1A1A1A 75%, #2B2B2B 75%, #2B2B2B 100%);
       background-size: 50px 50px; /* Size of the hexagons */
+      animation: moveBackground 10s linear infinite; /* Animation for movement */
+    }
+
+    @keyframes moveBackground {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 50px 50px; /* Move the background */
+      }
     }
 
     @keyframes pulse-glow {
