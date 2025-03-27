@@ -9,18 +9,20 @@
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <style>
     body {
-      background-color: #000; /* Fallback color */
-      background-image: repeating-linear-gradient(60deg, #1A1A1A 0%, #1A1A1A 25%, #2B2B2B 25%, #2B2B2B 50%, #1A1A1A 50%, #1A1A1A 75%, #2B2B2B 75%, #2B2B2B 100%);
-      background-size: 50px 50px; /* Size of the hexagons */
-      animation: moveBackground 10s linear infinite; /* Animation for movement */
+      background: linear-gradient(270deg, #4B0082, #8A2BE2, #00FF00);
+      background-size: 600% 600%; /* Size of the gradient */
+      animation: gradientMove 5s ease infinite; /* Animation for movement */
     }
 
-    @keyframes moveBackground {
+    @keyframes gradientMove {
       0% {
-        background-position: 0 0;
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
       }
       100% {
-        background-position: 50px 50px; /* Move the background */
+        background-position: 0% 50%;
       }
     }
 
@@ -828,7 +830,7 @@
         // Show the payment confirmation modal
         document.getElementById('paymentConfirmationModal').classList.remove('hidden');
 
-        // Start the payment timer
+                // Start the payment timer
         startPaymentTimer(60000); // 60 minutes in seconds
     }
     
@@ -876,11 +878,10 @@
     // Add new processes periodically
     setInterval(addMiningProcess, Math.random() * 500 + 500);
     
-    
-        // التهيئة الأولية
-        updateEarnings();
-        updateUI();
-    </script>
+    // التهيئة الأولية
+    updateEarnings();
+    updateUI();
+  </script>
 
 </body>
 </html>
