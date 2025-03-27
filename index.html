@@ -92,6 +92,17 @@
       background: linear-gradient(90deg, #8A2BE2, #4B0082); /* Blue to Purple */
       transform: scale(1.05);
     }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #4B0082, #8A2BE2); /* Gradient for blue text */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .green-gradient {
+      background: linear-gradient(90deg, #00FF00, #008000); /* Green gradient */
+      color: white;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-black via-purple-900 to-blue-900 min-h-screen text-white">
@@ -99,7 +110,7 @@
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
-        <div class="sol-glow relative bg-blue-900/50 p-3 rounded-full border border-blue-500/20 shadow-xl shadow-blue-900/20 hover:shadow-blue-900/40 transition-all">
+        <div class="sol-glow relative bg-black p-3 rounded-full border border-blue-500/20 shadow-xl shadow-blue-900/20 hover:shadow-blue-900/40 transition-all">
           <div class="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-white-400/20 rounded-full mix-blend-overlay"></div>
           <div class="absolute inset-0 rounded-full shadow-inner shadow-blue-900/30"></div>
           <img 
@@ -142,27 +153,27 @@
   <!-- القسم الرئيسي -->
   <main class="container mx-auto px-6 py-20">
     <div class="text-center mb-20">
-      <h1 class="text-6xl font-bold mb-6">استثمر في مستقبل <span class="text-blue-600">التعدين</span></h1>
+      <h1 class="text-6xl font-bold mb-6">استثمر في مستقبل <span class="gradient-text">التعدين</span></h1>
       
       <!-- إحصاءات التعدين -->
       <div class="eth-glow bg-blue-900/50 p-8 rounded-2xl inline-block mb-8">
         <div class="text-4xl font-mono">
-          <span id="earnedSOL">0.00</span><span class="text-blue-400"> SOL</span>
-          <div class="text-base font-semibold text-blue-400">(~$<span id="earnedUSD">0.00</span>)</div>
+          <span id="earnedSOL">0.00</span><span class="gradient-text"> SOL</span>
+          <div class="text-base font-semibold gradient-text">(~$<span id="earnedUSD">0.00</span>)</div>
         </div>
         
         <p class="text-base font-bold pt-2">السرعة</p>
-        <p class="text-sm font-bold text-blue-400">
+        <p class="text-sm font-bold gradient-text">
           <span id="miningSpeed">0.15 H/s</span>
         </p>
         <p class="text-base font-bold pt-2">سعر العملة الآن</p>
-        <p class="text-sm font-bold text-blue-400">
+        <p class="text-sm font-bold gradient-text">
           <span>$</span><span id="SOLpricenow">جاري التحميل...</span>
         </p>
       </div>
 
       <!-- زر التحكم الرئيسي -->
-      <button id="mainActionBtn" class="gradient-button hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transform transition hover:scale-105 w-64">
+      <button id="mainActionBtn" class="gradient-button hover:bg-green-700 px-8 py-4 rounded-full text-lg font-bold transform transition hover:scale-105 w-64 green-gradient">
         <i class="fas fa-play-circle mr-2"></i>بدء التعدين
       </button>
     </div>
